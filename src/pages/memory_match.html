@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/memory_match.js"></script>
+</head>
+<body>
+    <div class="title">
+        <h1>Memory Match Game</h1>
+        <p>Flip two cards at a time. If they match, they stay revealed. Match all pairs to win.</p>
+    </div>
+
+    <div id="status-panel">
+        <p><strong>Moves:</strong> <span id="moves">0</span></p>
+        <p><strong>Matches:</strong> <span id="matches">0</span> / <span id="total-pairs">8</span></p>
+        <p><strong>Time:</strong> <span id="time">0</span> s</p>
+    </div>
+
+    <button id="btn-new-game">New Game</button>
+    <button id="btn-reset">Reset (Same Board)</button>
+
+    <div id="board"></div>
+    <div id="message"></div>
+
+
+</body>
+</html>
