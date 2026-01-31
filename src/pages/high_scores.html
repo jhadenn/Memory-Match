@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores</title>
+    <script src="../js/high_scores.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="memory_match.html">
+                <strong>Memory Match</strong>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="main-navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="memory_match.html">Play Game</a>
+                <a class="navbar-item" href="high_scores.html">High Scores</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1>High Scores</h1>
+    <table id="scores-table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Moves</th>
+                <th>Time (s)</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="scores-body">
+            <!-- Lab 01: fill with sample rows -->
+        </tbody>
+    </table>
+
+</body>
+</html>

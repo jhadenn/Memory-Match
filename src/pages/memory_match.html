@@ -3,27 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="../js/memory_match.js"></script>
+    <title>Memory Match</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/memory_match.css">
 </head>
 <body>
-    <div class="title">
-        <h1>Memory Match Game</h1>
-        <p>Flip two cards at a time. If they match, they stay revealed. Match all pairs to win.</p>
-    </div>
+    
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="memory_match.html">
+                <strong>Memory Match</strong>
+            </a>
 
-    <div id="status-panel">
-        <p><strong>Moves:</strong> <span id="moves">0</span></p>
-        <p><strong>Matches:</strong> <span id="matches">0</span> / <span id="total-pairs">8</span></p>
-        <p><strong>Time:</strong> <span id="time">0</span> s</p>
-    </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
 
-    <button id="btn-new-game">New Game</button>
-    <button id="btn-reset">Reset (Same Board)</button>
+        <div id="main-navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="memory_match.html">Play Game</a>
+                <a class="navbar-item" href="high_scores.html">High Scores</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="page">
+        <header class="page-header">
+            <h1 class="page-title">Memory Match</h1>
+            <p class="page-subtitle">Flip two cards at a time. If they match, they stay revealed. Match all pairs to win.</p>
+        </header>
 
-    <div id="board"></div>
-    <div id="message"></div>
+        <section class="game-layout">
+            <aside class="panel status-panel">
+                <h2 class="panel-title">Game Status</h2>
+                <div class="status-metrics">
+                    <p><span class="label">Moves:</span> <span class="value">13</span></p>
+                    <p><span class="label">Matches:</span> <span class="value">3</span> / <span class="value">8</span></p>
+                    <p><span class="label">Time:</span> <span class="value">69</span> s</p>
+                </div>
+                <div class="status-divider"></div>
+                <div class="status-actions">
+                    <button class="btn btn-primary" type="button">New Game</button>
+                    <button class="btn btn-secondary" type="button">Reset (Same Board)</button>
+                </div>
+            </aside>
 
+            <section class="panel board-panel">
+                <h2 class="panel-title">Board</h2>
+                <div class="board-grid">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </section>
+        </section>
+    </main>
 
 </body>
 </html>
