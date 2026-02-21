@@ -6,6 +6,8 @@
     <title>Memory Match</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="../css/memory_match.css">
+    <script defer src="../js/navbar.js"></script>
+    <script defer src="../js/memory_match.js"></script>
 </head>
 <body>
     
@@ -40,41 +42,34 @@
             <aside class="panel status-panel">
                 <h2 class="panel-title">Game Status</h2>
                 <div class="status-metrics">
-                    <p><span class="label">Moves:</span> <span class="value">13</span></p>
-                    <p><span class="label">Matches:</span> <span class="value">3</span> / <span class="value">8</span></p>
-                    <p><span class="label">Time:</span> <span class="value">69</span> s</p>
+                    <p><span class="label">Moves:</span> <span id="moves" class="value">0</span></p>
+                    <p><span class="label">Matches:</span> <span id="matches" class="value">0</span> / <span id="matches-total" class="value">8</span></p>
+                    <p><span class="label">Time:</span> <span id="time" class="value">0</span> s</p>
+                    <p><span class="label">Best streak:</span> <span id="best-streak" class="value">0</span></p>
                 </div>
                 <div class="status-divider"></div>
-                <div class="status-actions">
-                    <button class="btn btn-primary" type="button">New Game</button>
-                    <button class="btn btn-secondary" type="button">Reset (Same Board)</button>
+                <div class="status-controls">
+                    <label class="status-label" for="difficulty">Difficulty</label>
+                    <select id="difficulty" class="status-select">
+                        <option value="easy" selected>4×4 Easy</option>
+                        <option value="hard">6×6 Hard</option>
+                    </select>
                 </div>
+                <div class="status-actions">
+                    <button id="new-game-btn" class="btn btn-primary" type="button">New Game</button>
+                    <button id="reset-btn" class="btn btn-secondary" type="button">Reset (Same Board)</button>
+                </div>
+                <div id="score-form" class="score-form" aria-hidden="true">
+                    <label class="score-label" for="player-name">Name</label>
+                    <input id="player-name" class="score-input" type="text" maxlength="20" placeholder="Your name">
+                    <button id="save-score-btn" class="btn btn-primary" type="button">Save Score</button>
+                </div>
+                <p id="message" class="status-message" role="status" aria-live="polite"></p>
             </aside>
 
             <section class="panel board-panel">
                 <h2 class="panel-title">Board</h2>
-                <div class="board-grid">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </div>
+                <div id="board" class="board-grid" aria-label="Memory match board"></div>
             </section>
         </section>
     </main>

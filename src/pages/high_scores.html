@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Scores</title>
-    <script src="../js/high_scores.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/memory_match.css">
+    <script defer src="../js/navbar.js"></script>
+    <script defer src="../js/high_scores.js"></script>
 </head>
 <body>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
@@ -29,21 +31,29 @@
         </div>
     </nav>
 
-    <h1>High Scores</h1>
-    <table id="scores-table">
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Player</th>
-                <th>Moves</th>
-                <th>Time (s)</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-        <tbody id="scores-body">
-            <!-- Lab 01: fill with sample rows -->
-        </tbody>
-    </table>
+    <main class="page">
+        <header class="page-header">
+            <h1 class="page-title">High Scores</h1>
+            <p class="page-subtitle">Top recent wins (lowest moves, then fastest time).</p>
+        </header>
+
+        <section class="panel">
+            <div class="table-container">
+                <table id="scores-table" class="table is-striped is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Moves</th>
+                            <th>Time (s)</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scores-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
